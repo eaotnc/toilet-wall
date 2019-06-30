@@ -1,6 +1,7 @@
 {
   "name": "gh-pages-test",
   "version": "0.1.0",
+  "homepage": "http://eaotnc.github.io/gh-pages-test/",
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.1",
@@ -9,6 +10,8 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
