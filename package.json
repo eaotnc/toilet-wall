@@ -4,6 +4,7 @@
   "homepage": "http://eaotnc.github.io/gh-pages-test/",
   "private": true,
   "dependencies": {
+    "antd": "^3.20.6",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-canvas-draw": "^1.0.2",
