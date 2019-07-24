@@ -63,7 +63,7 @@ class App extends Component {
         { savedPictureList.length>0?
           savedPictureList.map((savedPicture)=>
          <CanvasDraw
-          style={{background: "#232323"}}
+          style={{background: "#282c34"}}
           disabled
           hideGrid 
           canvasWidth={this.state.width}
