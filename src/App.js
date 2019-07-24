@@ -66,8 +66,8 @@ class App extends Component {
           style={{background: "#282c34"}}
           disabled
           hideGrid 
-          canvasWidth={this.state.width}
-          canvasHeight={this.state.height}
+          canvasWidth={this.state.width-30}
+          canvasHeight={this.state.height-30}
           ref={canvasDraw => (this.loadableCanvas = canvasDraw)}
           saveData={savedPicture}
         />)
