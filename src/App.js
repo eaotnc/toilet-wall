@@ -3,6 +3,8 @@ import CanvasDraw from "react-canvas-draw";
 import { Button } from 'antd';
 import './App.css'
 import 'antd/dist/antd.css'; 
+import Sky from './sky'
+import reactLogo from './react.png'
 class App extends Component {
   state = {
     color: "#ffc600",
@@ -35,32 +37,17 @@ class App extends Component {
     const {savedPictureList}=this.state
     return (
       <div className="App">
-        <div className="canvas-drower">
-          <div className="label">
-            Eao toilet Wall
-          </div>
-        <CanvasDraw
-          style={{background: "#6b6b6b47" ,zIndex:"25",borderRadius:'14px'}}
-          hideGrid
-          ref={canvasDraw => (this.saveableCanvas = canvasDraw)}
-          brushColor={this.state.color}
-          brushRadius={this.state.brushRadius}
-          lazyRadius={this.state.lazyRadius}
-          canvasWidth={this.state.width}
-          canvasHeight={this.state.height}
-        />
-          <div>
-          <Button onClick={this.handleSavePicture} > Save  </Button>
-          <Button onClick={() => {this.saveableCanvas.clear()}} >
-            Clear
-          </Button>
-          <Button onClick={() => {this.saveableCanvas.undo()}}  >
-            Undo
-          </Button>
-        </div>
-        </div>
+        <Sky
+         size='50px'
+        //  background={'blue'}
+         time={200} 
+         how={3} 
+         images={{
+           0:reactLogo
+          }}
 
-        { savedPictureList.length>0?
+         > 
+           { savedPictureList.length>0?
           savedPictureList.map((savedPicture)=>
          <CanvasDraw
           style={{background: "#282c34"}}
@@ -73,6 +60,35 @@ class App extends Component {
         />)
         :null
       }
+           </Sky>
+          <div className="canvas-drower ">
+            <div className="label">
+              Eao toilet Wall
+            </div>
+            
+          <CanvasDraw
+            style={{background: "#6b6b6b47" ,zIndex:"25",borderRadius:'14px'}}
+            hideGrid
+            ref={canvasDraw => (this.saveableCanvas = canvasDraw)}
+            brushColor={this.state.color}
+            brushRadius={this.state.brushRadius}
+            lazyRadius={this.state.lazyRadius}
+            canvasWidth={this.state.width}
+            canvasHeight={this.state.height}
+          />
+            <div>
+              <Button onClick={this.handleSavePicture} > Save  </Button>
+              <Button onClick={() => {this.saveableCanvas.clear()}} >
+                Clear
+              </Button>
+              <Button onClick={() => {this.saveableCanvas.undo()}}  >
+                Undo
+              </Button>
+            </div>
+          </div>
+       
+
+      
       
        
       </div>

@@ -19,12 +19,22 @@
   color:wheat;
   
 }
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.slide-in-tr {
+	        animation: slide-in-tr 5s ease-out infinite forwards;
+}
+
+
+@keyframes slide-in-tr {
+  0% {
+    transform: translateY(-300px) translateX(300px);
   }
-  to {
-    transform: rotate(360deg);
+ 
+  50% {
+    transform: translateY(-150px) translateX(150px);
+  }
+  100% {
+    transform: translateY(-300px) translateX(300px);
   }
 }
 
