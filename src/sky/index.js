@@ -39,7 +39,7 @@ class Sky extends React.Component {
   }
 
   render() {
-    const { images, background, size, time } = this.props;
+    const { savedPictureList, background, size, time } = this.props;
     const outerStyle = {
       position: 'absolute',
       top: '0',
@@ -56,10 +56,9 @@ class Sky extends React.Component {
     return (
       <div style={outerStyle} id="sky">
         {this.state.moves.map((e, i) => {
-          const conditional = Math.floor(Math.random() * Object.keys(images).length);
-
+          const conditional = Math.floor(Math.random() * savedPictureList.length);
           return <Item
-            what={images[conditional]}
+            savedPicture={savedPictureList[conditional]}
             from={[e.fromX, e.fromY]}
             to={[e.toX, e.toY]}
             rotation={e.rotation}
@@ -88,7 +87,7 @@ Sky.propTypes = {
   background: PropTypes.string,
   time: PropTypes.number,
   how: PropTypes.any.isRequired,
-  images: PropTypes.object.isRequired
+  savedPictureList: PropTypes.object.isRequired
 }
 
 export default Sky;

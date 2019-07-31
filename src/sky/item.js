@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import CanvasDraw from "react-canvas-draw";
 
 class Item extends React.Component {
   constructor(props) {
@@ -47,8 +48,17 @@ class Item extends React.Component {
 
     return (
       <div style={style}>
-        {/* <img style={size} src={this.props.what} alt="" /> */}
-        {this.props.children}
+         <CanvasDraw
+          style={{background: "#ff000000"}}
+          disabled
+          hideGrid 
+          canvasWidth={180}
+          canvasHeight={180}
+          ref={canvasDraw => (this.loadableCanvas = canvasDraw)}
+          saveData={this.props.savedPicture}
+        />
+        
+      
       </div>
     );
   }
