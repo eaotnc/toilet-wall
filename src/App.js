@@ -4,7 +4,6 @@ import { Button } from 'antd';
 import './App.css'
 import 'antd/dist/antd.css'; 
 import Sky from './sky'
-import reactLogo from './react.png'
 class App extends Component {
   state = {
     color: "#ffc600",
@@ -32,7 +31,7 @@ class App extends Component {
         <Sky
          size='50px'
          time={50} 
-         how={10} 
+         how={savedPictureList.length+5} 
          savedPictureList={savedPictureList}
          > 
            </Sky>

@@ -10,9 +10,18 @@ class Sky extends React.Component {
     }
     this.movement = this.movement.bind(this);
   }
-
+ 
   componentDidMount() {
+    this.initState()
+  }
+
+  componentWillReceiveProps(){
+    this.initState()
+  }
+  
+   initState=()=>{
     const many = this.props.how;
+    console.log('how many',many)
     const temp_moves = [];
     for (let i = 0; i < many; i++) {
       temp_moves.push(this.movement());
@@ -21,6 +30,7 @@ class Sky extends React.Component {
       moves: temp_moves
     });
   }
+  
 
   movement() {
     const rotation = Math.floor((Math.round(Math.random()) * 2 - 1) * 600);

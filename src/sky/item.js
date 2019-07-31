@@ -52,8 +52,8 @@ class Item extends React.Component {
           style={{background: "#ff000000"}}
           disabled
           hideGrid 
-          canvasWidth={180}
-          canvasHeight={180}
+          canvasWidth={150}
+          canvasHeight={150}
           ref={canvasDraw => (this.loadableCanvas = canvasDraw)}
           saveData={this.props.savedPicture}
         />
