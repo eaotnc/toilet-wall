@@ -15,33 +15,28 @@ class App extends Component {
     savedPictureList:[],
   };
 
-  componentDidMount(){
-    firebase.initializeApp({
-      apiKey: 'AIzaSyDPSLUchbojKkZQI2oMLa5eUB67Qyyg65w',
-      authDomain: 'toilet-wall.firebaseapp.com',
-      projectId: 'toilet-wall'
-    });
-    
-    let db = firebase.firestore();
-    console.log('firebase',db)
-      db.collection("users").add({
-        first: "Ada",
-        last: "Lovelace",
-        born: 1815
-    })
-    .then(function(docRef) {
-        console.log("Document written with ID: ", docRef.id);
-    })
-    .catch(function(error) {
-        console.error("Error adding document: ", error);
-    });
-  
-    db.collection("users").get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-          console.log(`${doc.id} =>`,doc.data());
+  async componentDidMount(){
+    try {
+   
+      firebase.initializeApp({
+        apiKey: 'AIzaSyDPSLUchbojKkZQI2oMLa5eUB67Qyyg65w',
+        authDomain: 'toilet-wall.firebaseapp.com',
+        projectId: 'toilet-wall'
       });
-  });
-  
+      
+      let vector=[]
+      let db = firebase.firestore();
+      await db.collection("toilet-wall").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            console.log(`${doc.id} =>`,doc.data());
+            vector=[...vector, doc.data().vector]
+        })
+      })
+      console.log('vector',vector)
+      this.setState({savedPictureList:2})
+    } catch (e) {
+      console.log('error',e)
+    }
   }
 
   handleSavePicture=()=>{
@@ -61,8 +56,6 @@ class App extends Component {
     const {savedPictureList}=this.state
     return (
       <div className="App">
-        <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
         <Sky
          size='50px'
          time={50} 
