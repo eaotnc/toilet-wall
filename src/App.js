@@ -33,7 +33,7 @@ class App extends Component {
         })
       })
       console.log('vector',vector)
-      this.setState({savedPictureList:2})
+      this.setState({savedPictureList:vector})
     } catch (e) {
       console.log('error',e)
     }
