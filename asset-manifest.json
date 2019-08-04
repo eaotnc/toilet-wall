@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/gh-pages-test/static/css/main.01416aca.chunk.css",
-    "main.js": "/gh-pages-test/static/js/main.74b9796b.chunk.js",
-    "main.js.map": "/gh-pages-test/static/js/main.74b9796b.chunk.js.map",
-    "runtime~main.js": "/gh-pages-test/static/js/runtime~main.01ccb381.js",
-    "runtime~main.js.map": "/gh-pages-test/static/js/runtime~main.01ccb381.js.map",
-    "static/css/2.cb759328.chunk.css": "/gh-pages-test/static/css/2.cb759328.chunk.css",
-    "static/js/2.607ecb95.chunk.js": "/gh-pages-test/static/js/2.607ecb95.chunk.js",
-    "static/js/2.607ecb95.chunk.js.map": "/gh-pages-test/static/js/2.607ecb95.chunk.js.map",
-    "index.html": "/gh-pages-test/index.html",
-    "precache-manifest.49ebc92b272c70f87508de81a5759140.js": "/gh-pages-test/precache-manifest.49ebc92b272c70f87508de81a5759140.js",
-    "service-worker.js": "/gh-pages-test/service-worker.js",
-    "static/css/2.cb759328.chunk.css.map": "/gh-pages-test/static/css/2.cb759328.chunk.css.map",
-    "static/css/main.01416aca.chunk.css.map": "/gh-pages-test/static/css/main.01416aca.chunk.css.map"
+    "main.css": "/toilet-wall/static/css/main.01416aca.chunk.css",
+    "main.js": "/toilet-wall/static/js/main.07e9c7e9.chunk.js",
+    "main.js.map": "/toilet-wall/static/js/main.07e9c7e9.chunk.js.map",
+    "runtime~main.js": "/toilet-wall/static/js/runtime~main.8bfefbb4.js",
+    "runtime~main.js.map": "/toilet-wall/static/js/runtime~main.8bfefbb4.js.map",
+    "static/css/2.cb759328.chunk.css": "/toilet-wall/static/css/2.cb759328.chunk.css",
+    "static/js/2.2113ba90.chunk.js": "/toilet-wall/static/js/2.2113ba90.chunk.js",
+    "static/js/2.2113ba90.chunk.js.map": "/toilet-wall/static/js/2.2113ba90.chunk.js.map",
+    "index.html": "/toilet-wall/index.html",
+    "precache-manifest.3e542d42e1c042df797a62c10fe26b77.js": "/toilet-wall/precache-manifest.3e542d42e1c042df797a62c10fe26b77.js",
+    "service-worker.js": "/toilet-wall/service-worker.js",
+    "static/css/2.cb759328.chunk.css.map": "/toilet-wall/static/css/2.cb759328.chunk.css.map",
+    "static/css/main.01416aca.chunk.css.map": "/toilet-wall/static/css/main.01416aca.chunk.css.map"
   }
 }
