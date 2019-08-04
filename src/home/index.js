@@ -60,7 +60,7 @@ class Home extends Component {
          > 
            </Sky>
           <div className="canvas-drower ">
-          <Button className="refrech-bt" onClick={this.handleRandomColor} >refrech</Button>
+          <Button className="refresh-bt" onClick={this.handleRandomColor} >refrech</Button>
             <div className="label">
             Toilet Wall
             
