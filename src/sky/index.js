@@ -21,7 +21,6 @@ class Sky extends React.Component {
   
    initState=()=>{
     const many = this.props.how;
-    console.log('how many',many)
     const temp_moves = [];
     for (let i = 0; i < many; i++) {
       temp_moves.push(this.movement());
