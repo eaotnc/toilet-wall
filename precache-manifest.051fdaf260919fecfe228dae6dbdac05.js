@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f57d41993c53590bba4b341f4155ff60",
+    "revision": "3d05d3c7ffbee1d4317f34c4440ff8ec",
     "url": "/toilet-wall/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/toilet-wall/static/css/2.cb759328.chunk.css"
   },
   {
-    "revision": "06b5454d701a841db11c",
+    "revision": "d7b1b44a2de5ebcc8408",
     "url": "/toilet-wall/static/css/main.01416aca.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/toilet-wall/static/js/2.2113ba90.chunk.js"
   },
   {
-    "revision": "06b5454d701a841db11c",
-    "url": "/toilet-wall/static/js/main.07e9c7e9.chunk.js"
+    "revision": "d7b1b44a2de5ebcc8408",
+    "url": "/toilet-wall/static/js/main.a1120a9e.chunk.js"
   },
   {
     "revision": "7f852b140531edd4489e",
