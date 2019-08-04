@@ -27,14 +27,21 @@ class Home extends Component {
 
   handleSavePicture=()=>{
     this.handleRandomColor()
-    const data =JSON.parse(this.saveableCanvas.getSaveData())
-    if(data.lines.length>0){
-      const savedPictureList= [...this.state.savedPictureList,this.saveableCanvas.getSaveData() ]
+    const ParseData =JSON.parse(this.saveableCanvas.getSaveData())
+    const data =this.saveableCanvas.getSaveData()
+    if(ParseData.lines.length>0){
+      const savedPictureList= [...this.state.savedPictureList,data ]
       this.setState({
         savedPictureList
       })
+      db.collection("toilet-wall").doc().set({
+        vector:data
+      })
+    }
 
-    }  
+    
+   
+
   }
   handleRandomColor=()=>{
     this.setState({color:"#" + Math.floor(Math.random() * 16777215).toString(16)})
@@ -46,7 +53,7 @@ class Home extends Component {
         <Sky
          size='50px'
          time={50} 
-         how={savedPictureList.length+5} 
+         how={savedPictureList.length+oldpic.length+5} 
          savedPictureList={[ ...oldpic, ...savedPictureList]}
          > 
            </Sky>
@@ -75,7 +82,6 @@ class Home extends Component {
               </Button>
               <Button style={{marginLeft:'10px'}} onClick={this.handleRandomColor} > change Color  </Button>
             </div>
-            {/* {savedPictureList.map(pic=>pic)} */}
           </div>
       </div>
     );
