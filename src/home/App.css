@@ -15,7 +15,7 @@
 }
 
 .refresh-bt{
-  position: absolute;
+  position: absolute !important;
   top: -132px;
   left: 165px;
 }
