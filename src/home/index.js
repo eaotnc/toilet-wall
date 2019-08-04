@@ -8,7 +8,7 @@ import Sky from '../sky'
 import {db} from '../firebase'
 class Home extends Component {
   state = {
-    color: "#ffc600",
+    color: "#" + Math.floor(Math.random() * 16777215).toString(16),
     width: 400,
     height: 350,
     brushRadius: 3,
@@ -21,6 +21,7 @@ class Home extends Component {
     db.collection("toilet-wall").get().then((querySnapshot) => {
         const data = querySnapshot.docs.map(doc => doc.data().vector);
           this.setState({oldpic: data, loading:false})
+          console.log('data',data)
       })
 
   }
@@ -50,6 +51,7 @@ class Home extends Component {
     const {savedPictureList,oldpic}=this.state
     return (
       <div className="App">
+        
         <Sky
          size='50px'
          time={50} 
@@ -58,9 +60,12 @@ class Home extends Component {
          > 
            </Sky>
           <div className="canvas-drower ">
+          <Button className="refrech-bt" onClick={this.handleRandomColor} >refrech</Button>
             <div className="label">
             Toilet Wall
+            
             </div>
+            
           <CanvasDraw
             style={{background: "#6b6b6b47" ,zIndex:"25",borderRadius:'14px'}}
             hideGrid
