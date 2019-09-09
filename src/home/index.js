@@ -30,9 +30,10 @@ class Home extends Component {
     const ParseData = JSON.parse(this.saveableCanvas.getSaveData())
     const data = this.saveableCanvas.getSaveData()
     if (ParseData.lines.length > 0) {
-      const savedPictureList = [...this.state.savedPictureList, data]
       this.setState({
-        savedPictureList,
+        savedPictureList: [
+          ...this.state.savedPictureList,
+          data],
       })
       db.collection('toilet-wall').doc().set({
         vector: data,
