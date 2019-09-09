@@ -50,7 +50,6 @@ class Item extends React.Component {
       <div style={style}>
         <CanvasDraw
           style={{ background: '#ff000000' }}
-          disabled
           hideGrid
           canvasWidth={190}
           canvasHeight={150}

@@ -16,6 +16,7 @@ class Home extends Component {
     lazyRadius: 5,
     oldpic: [],
     savedPictureList: [],
+    loading: true,
   };
 
   componentDidMount() {
@@ -46,16 +47,21 @@ class Home extends Component {
   }
 
   render() {
-    const { savedPictureList, oldpic } = this.state
+    const {
+      savedPictureList, oldpic, color, brushRadius, lazyRadius, width, height, loading,
+    } = this.state
     return (
       <div className="App">
-
-        <Sky
-          size="50px"
-          time={50}
-          how={Math.min(savedPictureList.length + oldpic.length + 5, 50)}
-          savedPictureList={[...oldpic, ...savedPictureList]}
-        />
+        {!loading
+          ? (
+            <Sky
+              size="50px"
+              time={20}
+              pictureAmount={Math.min(savedPictureList.length + oldpic.length + 5, 40)}
+              savedPictureList={[...oldpic, ...savedPictureList]}
+            />
+          )
+          : null}
         <div className="canvas-drower ">
           <Button className="refresh-bt" onClick={this.handleRandomColor}>refresh</Button>
           <div className="label">Toilet Wall</div>
@@ -64,11 +70,11 @@ class Home extends Component {
             style={{ background: '#6b6b6b47', zIndex: '25', borderRadius: '14px' }}
             hideGrid
             ref={(canvasDraw) => (this.saveableCanvas = canvasDraw)}
-            brushColor={this.state.color}
-            brushRadius={this.state.brushRadius}
-            lazyRadius={this.state.lazyRadius}
-            canvasWidth={this.state.width}
-            canvasHeight={this.state.height}
+            brushColor={color}
+            brushRadius={brushRadius}
+            lazyRadius={lazyRadius}
+            canvasWidth={width}
+            canvasHeight={height}
           />
 
           <div>
