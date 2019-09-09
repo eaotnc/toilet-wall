@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "antd": "^3.20.6",
+    "eslint-config-airbnb": "^18.0.1",
     "firebase": "6.3.4",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
@@ -35,5 +36,4 @@
       "last 1 safari version"
     ]
   }
-
 }

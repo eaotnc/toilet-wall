@@ -25,27 +25,3 @@
   font-size: 25px;
 }
 
-.slide-in-tr {
-	        animation: slide-in-tr 5s ease-out infinite forwards;
-}
-
-
-@keyframes slide-in-tr {
-  0% {
-    transform: translateY(-300px) translateX(300px);
-  }
- 
-  50% {
-    transform: translateY(-150px) translateX(150px);
-  }
-  100% {
-    transform: translateY(-300px) translateX(300px);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .canvas-drower {
-    left: 3%;
-  }
-}
-
