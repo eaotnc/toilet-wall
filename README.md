@@ -18,8 +18,6 @@ firebase functions:config:set authorization.secret_key_base="OUR_SECRET_BASE"
 3. create .runtimeconfig.json for firebase clound function enviernment variable
 ```
 cd functions
-```
-```
 firebase functions:config:get>.runtimeconfig.json
 ```
 4. build all file 
