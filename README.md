@@ -4,6 +4,8 @@ toilet-wall is a toliet-wall simulator for people who need to write something on
 how it work 
  write a picture with canvas
 
+homepage
+ http://eaotnc.github.io/toilet-wall
 
 
 
